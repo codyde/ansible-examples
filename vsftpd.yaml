@@ -1,0 +1,13 @@
+--- 
+- hosts: all
+  remote_user: root
+  connection: ssh
+  gather_facts: yes
+  vars:
+    username: admin
+  tasks:
+  - name: Install vsftpd
+    # Install vsftp
+    yum: 
+      name: vsftpd
+      state: latest
