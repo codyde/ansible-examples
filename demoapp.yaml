@@ -38,12 +38,12 @@
     - name: Install package.json dependencies
       npm:
         path: /tmp/cas-demo-application/
+    - name: Install AngularCLI
+      command: npm install -g @angular/cli
     - name: Disable CLI warning
       command: ng config -g cli.warnings.versionMismatch false
       environment:
         PATH: /sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
-    - name: Install AngularCLI
-      command: npm install -g @angular/cli
     - name: Build Application
       command: ng build
       args:
