@@ -45,7 +45,9 @@
       environment:
         PATH: /sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
     - name: Install Node SASS
-      command: npm install --unsafe-perm -g node-sass
+      command: npm install --unsafe-perm node-sass
+      args:
+        chdir: /tmp/cas-demo-application
       environment:
         PATH: /sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
     - name: Build Application
