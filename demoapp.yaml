@@ -44,6 +44,10 @@
       command: ng config -g cli.warnings.versionMismatch false
       environment:
         PATH: /sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
+    - name: Install Node SASS
+      command: npm install --unsafe-perm -g node-sass
+      environment:
+        PATH: /sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
     - name: Build Application
       command: ng build
       args:
